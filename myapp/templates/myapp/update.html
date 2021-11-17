@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+
+    <h1 style="text-align:center">This is in Update page</h1>
+
+    <a href="{% url 'myapp:index' %}">Go to index page</a><br><br>
+
+    <form action="{% url 'myapp:update_data' %}" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="upname" placeholder="Enter name here "><br><br>
+        <input type="text" name="upaddress" placeholder="Enter address here"><br><br>
+        <input type="submit" value="Update">
+    </form>
+
+</body>
+</html>
+

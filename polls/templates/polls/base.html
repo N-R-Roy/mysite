@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div style="background:lightgreen;">
+        <h1 style="text-align:center;">This is is navigation heading</h1>
+        <a href="{% url 'polls:index' %}">HOME</a>
+    </div>
+
+    {% block body %}
+
+    {% endblock %}
+
+</body>
+</html>

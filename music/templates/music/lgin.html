@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">User Login</h1>
+
+    <p>{{rdata}}</p>
+
+    <form action="{% url 'music:check_user' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter username here "><br><br>
+        <input type="password" name="password" placeholder="Enter password here "><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+
+    <a href="{% url 'music:register' %}">Create new account</a>
+
+    {% load static %}
+    <img src="{% static 'music/flowerpic.jpeg' %}" alt="flowerpic">
+
+    <p style="text-align: center;">{{data}}</p>
+
+</body>
+</html>

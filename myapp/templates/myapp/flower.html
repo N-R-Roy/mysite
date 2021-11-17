@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flower</title>
+</head>
+<body>
+
+    <h1 style="text-align:center;">This is flower page</h1>
+
+    <a href="{% url 'myapp:index' %}">Go to index page</a><br><br>
+
+    <a href="{% url 'myapp:bird' %}">Go to bird page</a><br><br>
+
+<!--    <p>Your enter name is : {{name}}</p>-->
+    <ul>
+        {% for tkn in token %}
+        <li>{{tkn}}</li>
+        {% endfor %}
+
+    </ul>
+
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <img src="{% static 'myapp/images/flowerpic.jpeg' %}" alt="Flower pic">
+
+</body>
+</html>

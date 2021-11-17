@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bird</title>
+</head>
+<body>
+
+    <h1 style="text-align:center;">This is bird page</h1>
+
+    <a href="{% url 'myapp:index' %}">Go to index page</a><br><br>
+
+
+    <form action="{% url 'myapp:tname' %}" method="post">
+
+        {% csrf_token %}
+
+        <input type="text" name="txt" id="txt" placeholder="Enter text here " value=""><br>
+        <input type="submit" value="Click">
+    </form>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <img src="{% static 'myapp/images/birdpic.jpeg' %}" alt="bird pic">
+
+</body>
+</html>

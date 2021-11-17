@@ -1,0 +1,25 @@
+
+{% extends 'music/base.html' %}
+
+{% block title %}Detail of {{album.album_title}}{% endblock title %}
+
+{% block body %}
+<img src="{{album.album_logo.url}}" width="300px" height="200px">
+
+<!--<video width="400" controls>
+  <source src="{{album.album_logo.url}}" type="video/mp4">
+</video>-->
+
+<h3>Album Name : {{album.album_title}}</h3>
+
+<h4>Artist Name : {{album.artist}}</h4>
+
+<h4>List of song</h4>
+<ul>
+    {% for song in album.song_set.all %}
+        <li>{{song.song_title}}</li><br>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'music:song-add' %}">Add Song</a>
+{% endblock body %}

@@ -1,0 +1,17 @@
+
+<h1 style="text-align:center; color: blue;">Employee Information</h1>
+
+<table style="border:2px solid black; width: 100%;">
+    <tr style="color:green; background: lightblue;">
+        <th>Name</th>
+        <th>Address</th>
+        <th>Dept</th>
+    </tr>
+    {% for emp in emp_list %}
+    <tr>
+        <td style="border: 2px solid black; text-align: center;">{{emp.name}}</td>
+        <td style="border: 2px solid black; text-align: center;">{{emp.address}}</td>
+        <td style="border: 2px solid black; text-align: center;">{{emp.dept}}</td>
+    </tr>
+    {% endfor %}
+</table>

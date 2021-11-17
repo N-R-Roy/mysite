@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AjaxPage</title>
+</head>
+<body>
+    <form id="add">
+        {% csrf_token %}
+        <input type="text" id="num1" placeholder="Enter first number ">
+
+        <input type="text" id="num2" placeholder="Enter second number ">
+
+        <button type="submit">SUM</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+
+            $(document).on('submit', "#add", function(e){
+
+                e.preventDefault();
+
+                var nm1 = $("#num1").val();
+                var nm2 = $("#num2").val();
+
+                //var sum = nm1 + nm2;
+
+                //alert(sum);
+
+                $.ajax({
+                    type: "POST",
+                    url: "{%url 'myapp2:ajax_sum' %}",
+                    data: {
+                        nmb1: nm1,
+                        nmb2: nm2,
+                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val();
+                    },
+                    success: function (response) {
+                       alert(response);
+                    }
+                });
+            });
+
+    </script>
+
+</body>
+</html>

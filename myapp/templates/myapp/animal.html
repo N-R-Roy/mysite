@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal</title>
+</head>
+<body>
+
+    <h1 style="text-align:center;">This is animal page</h1>
+
+    <a href="{% url 'myapp:index' %}">Go to index page</a><br><br>
+
+    <ul>
+        {% for emp in emp_list %}
+        <li>Id:{{emp.id}} | Name: {{emp.name}} | Address:{{emp.address}} | Dept:{{emp.dept}}</li>
+        {% endfor %}
+    </ul>
+
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+    <img src="{% static 'myapp/images/birdpic.jpeg' %}" alt="bird pic">
+
+
+</body>
+</html>

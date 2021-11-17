@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title%}{% endblock title %}</title>
+        <style>
+            #dv1 {
+                background: lightgray;
+                width:98%;
+                height:10%;
+                border: 2px solid blue;
+                padding: 5px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="dv1">
+            <a href="{% url 'music:index' %}">Home</a>&nbsp; &nbsp;
+            <a href="{% url 'music:index' %}">Album</a>&nbsp; &nbsp;
+            <a href="{% url 'music:song-list' %}">Song</a>&nbsp; &nbsp;
+            <a href="{% url 'music:album-add' %}">Add_album</a>&nbsp; &nbsp;
+            <a href="{% url 'music:login' %}">LogOut</a>&nbsp; &nbsp;
+        </div>
+
+        {% block body %}
+        {% endblock body %}
+
+    </body>
+
+</html>
+

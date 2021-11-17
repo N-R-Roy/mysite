@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert</title>
+</head>
+<body>
+
+    <h1 style="text-align:center">This is in Insert page</h1>
+
+    <a href="{% url 'myapp:index' %}">Go to index page</a><br><br>
+
+    <form action="{% url 'myapp:insert_data' %}" method="post">
+
+        {% csrf_token %}
+
+        <input type="text" name="txtname" placeholder="Enter name here"><br>
+        <input type="text" name="txtaddress" placeholder="Enter address here"><br>
+        <input type="text" name="txtdept" placeholder="Enter dept here"><br><br>
+
+        <input type="submit" value="Insert">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add user</title>
+</head>
+<body>
+
+    <form action="{% url 'myapp2:add_user_information' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="user_name" placeholder="Enter user name here"><br>
+        <input type="text" name="user_address" placeholder="Enter user address here"><br>
+        <input type="text" name="user_hobby" placeholder="Enter user hobby here"><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+
+</body>
+</html>

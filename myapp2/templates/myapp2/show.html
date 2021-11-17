@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show page</title>
+</head>
+<body>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp2/show_style.css' %}">
+
+    <h1>This is show page</h1>
+
+    <form action="{% url 'myapp2:result' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="txt_num1" placeholder="Enter num1 here"><br>
+        <input type="text" name="txt_num2" placeholder="Enter num2 here"><br><br>
+
+        <input type="submit" value="ADD">
+    </form>
+
+</body>
+</html>

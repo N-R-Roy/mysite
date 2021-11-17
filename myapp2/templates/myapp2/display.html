@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display page</title>
+</head>
+<body>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp2/display_style.css' %}">
+    <h1>This is display page</h1>
+
+    <p>Here show only these users info whose address is Dha</p>
+
+    <ul>
+        {% for user in users %}
+        <li>Name:{{user.name}} | Address:{{user.address}} | Hobby:{{user.hobby}}</li><br>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+    </head>
+
+    <body>
+
+        <div style="border: 5px solid black; margin: 5px; padding: 10px; background: green;">
+            <h1 style="text-align: center;">This is header</h1>
+        </div>
+
+        <div style="border: 5px solid black; margin: 5px; padding: 10px; background: white;">
+
+            <h1 style="text-align: center;">Myapp Homepage</h1>
+
+            <a href="show/{{4}}">Show page</a><br><br>
+
+            <a href="{% url 'myapp:display' %}">Display page</a><br><br>
+
+            <a href="{% url 'myapp:printt' 4 5 %}">Printt page</a><br><br>
+
+            <a href="{% url 'myapp:animal' %}">Animal page</a><br><br>
+
+            <a href="{% url 'myapp:bird' %}">Bird page</a><br><br>
+
+            <a href="{% url 'myapp:fish' %}">Fish page</a><br><br>
+
+            <a href="{% url 'myapp:flower' %}">Flower page</a><br><br>
+
+            <a href="{% url 'myapp:fruit' %}">Fruit page</a><br><br>
+
+            <a href="{% url 'myapp:tree' %}">Tree page</a><br><br>
+
+            <a href="{% url 'myapp:empinfo' %}">EmpInfo page</a><br><br>
+
+            <a href="{% url 'myapp:insert' %}">Insert page</a><br><br>
+
+            <a href="{% url 'myapp:search' %}">Search page</a><br><br>
+
+            <a href="{% url 'myapp:update' %}">Update page</a><br><br>
+
+            <a href="{% url 'myapp:delete' %}">Delete page</a><br><br>
+
+            <a href="{% url 'myapp:country' %}">Country page</a><br><br>
+
+        </div>
+
+        <div style="border: 5px solid black; margin: 5px; padding: 10px; background: green;">
+            <h1 style="text-align: center;">This is footer</h1>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form>
+        {% for field in form %}
+        <label>{{field.label_tag}}</label>
+        <div>{{field}}</div>
+        {% endfor %}
+
+        <input type="submit" value="SUBMIT">
+    </form>
+
+</body>
+</html>
+

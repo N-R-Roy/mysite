@@ -1,0 +1,12 @@
+
+{% extends 'music/base.html' %}
+
+{% block title %}All Song{% endblock title %}
+
+{% block body %}
+<ol>
+    {% for song in songs %}
+    <li>{{song}}</li><br>
+    {% endfor %}
+</ol>
+{% endblock body %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+
+    <h1 style="text-align:center">This is in Delete page</h1>
+
+    <a href="{% url 'myapp:index' %}">Go to index page</a><br><br>
+
+    <form action="{% url 'myapp:delete_data' %}" method="post">
+
+        {% csrf_token %}
+
+        <input type="text" name="dname" placeholder="Enter name here"><br><br>
+        <input type="submit" value="Delete">
+    </form>
+
+
+</body>
+</html>

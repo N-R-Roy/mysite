@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Myapp2</title>
+</head>
+<body>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp2/index_style.css' %}">
+    <h1>This is myapp2</h1>
+
+    <a href="{% url 'myapp2:display' 'Dha' %}">Go to display page</a><br><br>
+
+    <a href="show/">Go to show page</a><br><br>
+
+    <a href="{% url 'myapp2:add_user' %}">Go to add user page</a><br><br>
+
+    <a href="{% url 'myapp2:myview' %}">Go to myview page</a><br><br>
+
+    <a href="{% url 'myapp2:ajax_page' %}">Go to ajax page</a>
+
+</body>
+</html>

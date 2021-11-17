@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+
+    <h1 style="text-align:center">This is in Search page</h1>
+
+    <a href="{% url 'myapp:index' %}">Go to index page</a><br><br>
+
+    <form action="{% url 'myapp:search_data' %}" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="srchname" placeholder="Enter neme here">
+        <input type="submit" value="Search">
+    </form>
+
+    <p>Name : {{emp.name}}</p>
+    <p>Address : {{emp.address}}</p>
+    <p>Dept : {{emp.dept}}</p>
+
+</body>
+</html>

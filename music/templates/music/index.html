@@ -1,0 +1,24 @@
+
+{% extends 'music/base.html' %}
+
+{% block title %}Homepage{% endblock title%}
+
+{% block body %}
+<h3>List of Album</h3>
+{% if albums %}
+<ol>
+    {% for album in albums %}
+        <li>
+            <a href="{% url 'music:detail' album.id %}" >{{album.album_title}}</a><br><br>
+            <form action="{% url 'music:album-delete' album.id %}" method="post">
+                {% csrf_token %}
+                <button>Delete {{album.album_title}} album</button>
+            </form>
+            <br>
+        </li>
+    {% endfor %}
+</ol>
+{% endif %}
+
+{% endblock body %}
+
